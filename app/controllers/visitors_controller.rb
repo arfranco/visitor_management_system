@@ -1,9 +1,19 @@
 class VisitorsController < ApplicationController
 
-  def index
-    page = params[:page] || 1
-    @posts = self.get_page(page)
-    render :index
+  def home
+    render :home
   end
-  
+
+  def new
+    @visitor = Visitor.new 
+    render :new 
+  end
+
+  def index
+    @visitor = Visitor.all 
+    render :index
+  end 
+
+
+
 end
