@@ -1,8 +1,29 @@
-<%= form_for([@vistor, Visitor.new]) do |f| %>
-  <div class="form-field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
-  </div>
-
-
+<%= form_for @visitor, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+  <%= f.label :first_name %> <br>
+  <%= f.text_field :first_name %>
+  <br/>
+  <%= f.label :last_name %><br>
+  <%= f.text_field :last_name %>
+  <br/>
+  <%= f.label :phone_number %><br>
+  <%= f.text_field :phone_number %>
+  <br/>
+  <%= f.label :street_address %><br>
+  <%= f.text_field :street_address %>
+  <br/>
+  <%= f.label :city %><br>
+  <%= f.text_field :city %>
+  <br/>
+  <%= f.label :state %><br>
+  <%= f.text_field :state %>
+  <br/>
+  <%= f.label :date_of_visit %><br>
+  <%= f.text_field :date_of_visit %>
+  <br/>
+  <%= f.label :referral %><br>
+  <%= f.text_field :referral %>
+  <br/>
+  <%= f.submit "Add New Visitor" %>
 <% end %>
+
+

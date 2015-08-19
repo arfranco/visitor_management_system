@@ -5,7 +5,12 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root to: 'visitors#home'
 
-   resource :visitors
+  get 'visitor/:id', to: 'visitors#show', as: 'visitor'
+  get 'visitors', to: 'visitors#index'
+  get 'visitors/new', to: 'visitors#new', as: 'new_visitors'
+  post 'visitors', to: 'visitors#create'
+  get 'visitors/:id/edit', to: 'visitors#edit', as: 'visitor_edit'
+  put 'visitor/:id', to: 'visitors#update'
    # get 'visitors', to: 'visitors#home'
    # get 'visitors/new', to: 'visitors#new'
    # get 'visitors/all', to: 'visitors#index'
