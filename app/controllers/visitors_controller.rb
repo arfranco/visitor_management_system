@@ -10,7 +10,7 @@ class VisitorsController < ApplicationController
   end
 
   def index
-    @visitor = Visitor.all 
+    @visitors = Visitor.all 
     render :index
   end 
 

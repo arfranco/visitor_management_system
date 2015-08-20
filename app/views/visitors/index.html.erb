@@ -1,0 +1,5 @@
+<div class="visitors">
+  <% @visitors.each do |visitor| %>
+    <%= render partial: "visitor", object: visitor %>
+  <% end %>
+</div>
